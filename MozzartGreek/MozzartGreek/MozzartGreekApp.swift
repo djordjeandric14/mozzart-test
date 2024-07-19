@@ -11,7 +11,7 @@ import SwiftUI
 struct MozzartGreekApp: App {
     var body: some Scene {
         WindowGroup {
-            GreekGamesListView()
+            TabBarView()
         }
     }
 }

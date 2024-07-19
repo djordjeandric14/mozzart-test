@@ -43,8 +43,15 @@ struct APIService {
             throw URLError(.badServerResponse)
         }
         
-        let decodedResponse = try JSONDecoder().decode(T.self, from: data)
-        return decodedResponse
+        do {
+            let decodedResponse = try JSONDecoder().decode(T.self, from: data)
+            return decodedResponse
+        } catch {
+            print(error)
+            throw URLError(.callIsActive)
+        }
+        
+        
     }
 }
 
@@ -70,6 +77,10 @@ extension Endpoint {
     static func greekGames() -> Endpoint {
         return Endpoint(path: "/draws/v3.0/1100/upcoming/20", method: .GET, isAuth: false)
     }
-    
-    
+    static func results() -> Endpoint {
+        
+        let today = TimeFormatter.endpointDate()
+        
+        return Endpoint(path: "/draws/v3.0/1100/draw-date/\(today)/\(today)", method: .GET, isAuth: false)
+    }
 }

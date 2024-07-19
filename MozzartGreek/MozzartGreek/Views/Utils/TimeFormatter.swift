@@ -23,4 +23,12 @@ class TimeFormatter {
             }
         }
     }
+    
+    static func endpointDate() -> String {
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+
+        return dateFormatter.string(from: date)
+    }
 }

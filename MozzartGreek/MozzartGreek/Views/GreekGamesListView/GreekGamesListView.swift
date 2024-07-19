@@ -8,33 +8,40 @@
 import SwiftUI
 
 struct GreekGamesListView: View {
-    @StateObject var viewModel = GreekGamesViewModel()
+    @StateObject private var viewModel = GreekGamesViewModel()
     
     var body: some View {
-        NavigationView {
+//        NavigationView {
             NavigationStack {
-                List {
-                    ForEach(viewModel.games) { game in
-                        NavigationLink {
-                            GameDetailsView(game: game)
-                        } label: {
-                            HStack {
-                                Text("Izvlačenje: \(game.prettyString)")
-                                    .font(.footnote)
-                                Spacer()
-                                Text("Preostalo za uplatu: \(TimeFormatter.prettyShown(remaining: game.timeLeft))")
-                                    .foregroundColor(game.timeLeft < 60 ? .red : .black)
-                                    .font(.caption)
-                            }
+                List(viewModel.games) { game in
+                    NavigationLink(destination: GameDetailsView(game: game)) {
+                        HStack {
+                            Text("Izvlačenje: \(game.prettyString)")
+                                .font(.footnote)
+                            Spacer()
+                            Text("Preostalo za uplatu: \(TimeFormatter.prettyShown(remaining: game.timeLeft))")
+                                .foregroundColor(game.timeLeft < 60 ? .red : .primary)
+                                .font(.caption)
                         }
-                        
                     }
                 }
-                .navigationTitle("Greek")
+//            }
+            .listStyle(InsetGroupedListStyle())
+            .toolbar {
+                ToolbarItem(placement: .principal) {
+                    HStack {
+                        
+                        Text("Greek game")
+                            .font(.headline)
+                            .foregroundColor(.primary)
+                        Image("mozzart")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(height: 35)
+                    }
+                }
             }
-            
         }
-        
     }
 }
 

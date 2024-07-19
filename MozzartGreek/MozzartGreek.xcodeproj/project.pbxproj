@@ -21,6 +21,12 @@
 		BCBEE1972C497544000026FD /* GameDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBEE1962C497544000026FD /* GameDetailsView.swift */; };
 		BCBEE1992C497557000026FD /* GameDetailsVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBEE1982C497557000026FD /* GameDetailsVIewModel.swift */; };
 		BCBEE19C2C4984DE000026FD /* TimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBEE19B2C4984DE000026FD /* TimeFormatter.swift */; };
+		BCE75C812C4A7885009CFE98 /* LiveGreekWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE75C802C4A7885009CFE98 /* LiveGreekWebView.swift */; };
+		BCE75C842C4A7E8F009CFE98 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE75C832C4A7E8F009CFE98 /* TabBarView.swift */; };
+		BCE75C872C4A86D2009CFE98 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE75C862C4A86D2009CFE98 /* ResultsView.swift */; };
+		BCE75C892C4A86E6009CFE98 /* ResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE75C882C4A86E6009CFE98 /* ResultsViewModel.swift */; };
+		BCE75C8B2C4A8A18009CFE98 /* DrawResultsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE75C8A2C4A8A18009CFE98 /* DrawResultsResponse.swift */; };
+		BCE75C8D2C4AA2F9009CFE98 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE75C8C2C4AA2F9009CFE98 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +64,12 @@
 		BCBEE1962C497544000026FD /* GameDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsView.swift; sourceTree = "<group>"; };
 		BCBEE1982C497557000026FD /* GameDetailsVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsVIewModel.swift; sourceTree = "<group>"; };
 		BCBEE19B2C4984DE000026FD /* TimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatter.swift; sourceTree = "<group>"; };
+		BCE75C802C4A7885009CFE98 /* LiveGreekWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveGreekWebView.swift; sourceTree = "<group>"; };
+		BCE75C832C4A7E8F009CFE98 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		BCE75C862C4A86D2009CFE98 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
+		BCE75C882C4A86E6009CFE98 /* ResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewModel.swift; sourceTree = "<group>"; };
+		BCE75C8A2C4A8A18009CFE98 /* DrawResultsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawResultsResponse.swift; sourceTree = "<group>"; };
+		BCE75C8C2C4AA2F9009CFE98 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				BCBEE1882C4962E7000026FD /* GreekGamesResponse.swift */,
+				BCE75C8A2C4A8A18009CFE98 /* DrawResultsResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -163,6 +176,8 @@
 			isa = PBXGroup;
 			children = (
 				BCBEE19A2C4984B3000026FD /* Utils */,
+				BCE75C822C4A7E68009CFE98 /* TabBar */,
+				BCE75C852C4A86B4009CFE98 /* ResultsView */,
 				BCE75C7F2C4A7779009CFE98 /* LiveGreekWebView */,
 				BCBEE1932C4974F5000026FD /* GameDetailsView */,
 				BCBEE18E2C49669C000026FD /* GreekGamesListView */,
@@ -193,6 +208,7 @@
 			children = (
 				BCBEE19B2C4984DE000026FD /* TimeFormatter.swift */,
 				BC3BAF582C4989FD002DC878 /* RandomColor.swift */,
+				BCE75C8C2C4AA2F9009CFE98 /* Color.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -200,8 +216,26 @@
 		BCE75C7F2C4A7779009CFE98 /* LiveGreekWebView */ = {
 			isa = PBXGroup;
 			children = (
+				BCE75C802C4A7885009CFE98 /* LiveGreekWebView.swift */,
 			);
 			path = LiveGreekWebView;
+			sourceTree = "<group>";
+		};
+		BCE75C822C4A7E68009CFE98 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				BCE75C832C4A7E8F009CFE98 /* TabBarView.swift */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		BCE75C852C4A86B4009CFE98 /* ResultsView */ = {
+			isa = PBXGroup;
+			children = (
+				BCE75C862C4A86D2009CFE98 /* ResultsView.swift */,
+				BCE75C882C4A86E6009CFE98 /* ResultsViewModel.swift */,
+			);
+			path = ResultsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,13 +368,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCE75C812C4A7885009CFE98 /* LiveGreekWebView.swift in Sources */,
+				BCE75C872C4A86D2009CFE98 /* ResultsView.swift in Sources */,
+				BCE75C842C4A7E8F009CFE98 /* TabBarView.swift in Sources */,
 				BCBEE15E2C495F43000026FD /* MozzartGreekApp.swift in Sources */,
 				BCBEE19C2C4984DE000026FD /* TimeFormatter.swift in Sources */,
 				BCBEE1972C497544000026FD /* GameDetailsView.swift in Sources */,
 				BCBEE1992C497557000026FD /* GameDetailsVIewModel.swift in Sources */,
+				BCE75C8B2C4A8A18009CFE98 /* DrawResultsResponse.swift in Sources */,
+				BCE75C8D2C4AA2F9009CFE98 /* Color.swift in Sources */,
 				BC3BAF592C4989FD002DC878 /* RandomColor.swift in Sources */,
 				BCBEE1902C4966DB000026FD /* GreekGamesListView.swift in Sources */,
 				BCBEE18C2C4963A9000026FD /* ApiService.swift in Sources */,
+				BCE75C892C4A86E6009CFE98 /* ResultsViewModel.swift in Sources */,
 				BCBEE1892C4962E7000026FD /* GreekGamesResponse.swift in Sources */,
 				BCBEE1922C496717000026FD /* GreekGamesViewModel.swift in Sources */,
 			);

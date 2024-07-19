@@ -43,6 +43,9 @@ public struct GameDetailsView: View {
                     }
                 }
             }
+            NavigationLink("Uživo izvlačenje") {
+                                LiveGreekWebView()
+                            }
             Spacer()
         }
     }
