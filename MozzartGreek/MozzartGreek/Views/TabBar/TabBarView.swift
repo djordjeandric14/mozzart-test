@@ -18,7 +18,11 @@ struct TabBarView: View {
                     Text("Izvlačenje")
                 }
                 .tag(0)
-            
+            LiveGreekWebView()
+                .tabItem {
+                    Image(systemName: "bolt.circle.fill")
+                    Text("Uživo izvlačenje")
+                }
             ResultsView()
                 .tabItem {
                     Image(systemName: "list.bullet")

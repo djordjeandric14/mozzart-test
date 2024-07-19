@@ -27,9 +27,6 @@ public struct GameDetailsView: View {
             headerStack
             lazyGrid
             
-            NavigationLink("Uživo izvlačenje") {
-                LiveGreekWebView()
-            }
             Spacer()
         }
     }

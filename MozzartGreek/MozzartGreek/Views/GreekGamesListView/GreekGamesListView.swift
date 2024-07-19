@@ -32,7 +32,7 @@ struct GreekGamesListView: View {
                 ToolbarItem(placement: .principal) {
                     HStack {
                         
-                        Text("Greek game")
+                        Text("Grčki kino")
                             .font(.headline)
                             .foregroundColor(.primary)
                         Image("mozzart")

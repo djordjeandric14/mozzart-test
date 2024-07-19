@@ -54,7 +54,6 @@ struct LiveGreekWebView: View {
     var body: some View {
         ZStack {
             WebView(url: URL(string: "https://www.mozzartbet.com/sr/lotto-animation/26#/")!, isLoading: $isLoading)
-                .ignoresSafeArea()
             
             if isLoading {
                 ProgressView()
