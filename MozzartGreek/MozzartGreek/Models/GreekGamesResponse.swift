@@ -14,21 +14,19 @@ public struct GreekGames: Codable, Identifiable {
     }
     
     var prettyString: String {
-        let formatter = DateFormatter()
-        formatter.dateFormat = "HH:mm"
-        formatter.timeZone = .current
-        formatter.locale = .current
-
-        return formatter.string(from: date)
+        TimeFormatter.prettyString(date: date, format: "HH:mm")
     }
     
     var timeLeft: Double {
-        date.timeIntervalSince(.now) - 15        
+        date.timeIntervalSince(.now) - 15
     }
-    
     
     var date: Date {
         Date(timeIntervalSince1970: drawTime / 1000)
+    }
+    
+    var prettyDrawId: String {
+        String(drawId)
     }
     
     let gameId: Int
@@ -37,7 +35,4 @@ public struct GreekGames: Codable, Identifiable {
     let status: String
     let drawBreak: Int
     let visualDraw: Int
-//    let pricePoints: PricePoints
-//    let prizeCategories: [PrizeCategory]
-//    let wagerStatistics: WagerStatistics
 }

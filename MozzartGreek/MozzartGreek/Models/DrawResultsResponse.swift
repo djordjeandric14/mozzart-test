@@ -16,13 +16,26 @@ public struct DrawResults: Codable, Identifiable {
         UUID()
     }
     
+    var prettyDrawId: String {
+        String(drawId)
+    }
+    
+    var prettyDateString: String {
+        TimeFormatter.prettyString(date: date, format: "dd.MM.yyyy HH:mm")
+    }
+    
+    var date: Date {
+        Date(timeIntervalSince1970: drawTime / 1000)
+    }
+    
     let drawId: Int
-    let drawTime: Int
+    let drawTime: Double
     let winningNumbers: WinningNumbers
+    
+    
 }
 
 struct WinningNumbers: Codable {
     let list, bonus: [Int]
-
-//    let sidebets: Sidebets
+    
 }

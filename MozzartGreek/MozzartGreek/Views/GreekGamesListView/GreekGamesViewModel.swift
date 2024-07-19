@@ -18,7 +18,7 @@ class GreekGamesViewModel: ObservableObject {
         startCountdown()
         getAllGames()
     }
-
+    
     private func startCountdown() {
         countdownTimer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [weak self] _ in
             self?.date = Date()
@@ -39,5 +39,4 @@ class GreekGamesViewModel: ObservableObject {
             }
         }
     }
-    
 }

@@ -11,21 +11,22 @@ struct GreekGamesListView: View {
     @StateObject private var viewModel = GreekGamesViewModel()
     
     var body: some View {
-//        NavigationView {
-            NavigationStack {
-                List(viewModel.games) { game in
-                    NavigationLink(destination: GameDetailsView(game: game)) {
-                        HStack {
-                            Text("Izvlačenje: \(game.prettyString)")
-                                .font(.footnote)
-                            Spacer()
-                            Text("Preostalo za uplatu: \(TimeFormatter.prettyShown(remaining: game.timeLeft))")
-                                .foregroundColor(game.timeLeft < 60 ? .red : .primary)
-                                .font(.caption)
-                        }
+        NavigationStack {
+            List(viewModel.games) { game in
+                NavigationLink(destination: GameDetailsView(game: game)) {
+                    HStack {
+                        Text("Izvlačenje: \(game.prettyString)")
+                            .font(.footnote)
+                        Spacer()
+                        Text("Preostalo za uplatu: \(TimeFormatter.prettyShown(remaining: game.timeLeft))")
+                            .foregroundColor(game.timeLeft < 60 ? .red : .primary)
+                            .font(.caption)
                     }
                 }
-//            }
+            }
+            .refreshable {
+                viewModel.getAllGames()
+            }
             .listStyle(InsetGroupedListStyle())
             .toolbar {
                 ToolbarItem(placement: .principal) {
@@ -42,11 +43,5 @@ struct GreekGamesListView: View {
                 }
             }
         }
-    }
-}
-
-struct GreekGamesListView_Previews: PreviewProvider {
-    static var previews: some View {
-        GreekGamesListView()
     }
 }

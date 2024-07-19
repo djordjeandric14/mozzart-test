@@ -26,9 +26,8 @@ class ResultsViewModel: ObservableObject {
                 }
                 
             } catch {
-                
+                debugPrint(error)
             }
         }
     }
-    
 }

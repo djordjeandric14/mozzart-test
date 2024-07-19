@@ -26,7 +26,7 @@
 		BCE75C872C4A86D2009CFE98 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE75C862C4A86D2009CFE98 /* ResultsView.swift */; };
 		BCE75C892C4A86E6009CFE98 /* ResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE75C882C4A86E6009CFE98 /* ResultsViewModel.swift */; };
 		BCE75C8B2C4A8A18009CFE98 /* DrawResultsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE75C8A2C4A8A18009CFE98 /* DrawResultsResponse.swift */; };
-		BCE75C8D2C4AA2F9009CFE98 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE75C8C2C4AA2F9009CFE98 /* Color.swift */; };
+		BCE75C902C4AC695009CFE98 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE75C8F2C4AC695009CFE98 /* GridView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,7 +69,7 @@
 		BCE75C862C4A86D2009CFE98 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 		BCE75C882C4A86E6009CFE98 /* ResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewModel.swift; sourceTree = "<group>"; };
 		BCE75C8A2C4A8A18009CFE98 /* DrawResultsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawResultsResponse.swift; sourceTree = "<group>"; };
-		BCE75C8C2C4AA2F9009CFE98 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		BCE75C8F2C4AC695009CFE98 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -175,6 +175,7 @@
 		BCBEE18D2C49666D000026FD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BCE75C8E2C4AC67F009CFE98 /* SharedViews */,
 				BCBEE19A2C4984B3000026FD /* Utils */,
 				BCE75C822C4A7E68009CFE98 /* TabBar */,
 				BCE75C852C4A86B4009CFE98 /* ResultsView */,
@@ -208,7 +209,6 @@
 			children = (
 				BCBEE19B2C4984DE000026FD /* TimeFormatter.swift */,
 				BC3BAF582C4989FD002DC878 /* RandomColor.swift */,
-				BCE75C8C2C4AA2F9009CFE98 /* Color.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -236,6 +236,14 @@
 				BCE75C882C4A86E6009CFE98 /* ResultsViewModel.swift */,
 			);
 			path = ResultsView;
+			sourceTree = "<group>";
+		};
+		BCE75C8E2C4AC67F009CFE98 /* SharedViews */ = {
+			isa = PBXGroup;
+			children = (
+				BCE75C8F2C4AC695009CFE98 /* GridView.swift */,
+			);
+			path = SharedViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,12 +384,12 @@
 				BCBEE1972C497544000026FD /* GameDetailsView.swift in Sources */,
 				BCBEE1992C497557000026FD /* GameDetailsVIewModel.swift in Sources */,
 				BCE75C8B2C4A8A18009CFE98 /* DrawResultsResponse.swift in Sources */,
-				BCE75C8D2C4AA2F9009CFE98 /* Color.swift in Sources */,
 				BC3BAF592C4989FD002DC878 /* RandomColor.swift in Sources */,
 				BCBEE1902C4966DB000026FD /* GreekGamesListView.swift in Sources */,
 				BCBEE18C2C4963A9000026FD /* ApiService.swift in Sources */,
 				BCE75C892C4A86E6009CFE98 /* ResultsViewModel.swift in Sources */,
 				BCBEE1892C4962E7000026FD /* GreekGamesResponse.swift in Sources */,
+				BCE75C902C4AC695009CFE98 /* GridView.swift in Sources */,
 				BCBEE1922C496717000026FD /* GreekGamesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

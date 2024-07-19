@@ -28,7 +28,16 @@ class TimeFormatter {
         let date = Date()
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
-
+        
         return dateFormatter.string(from: date)
+    }
+    
+    static func prettyString(date: Date, format: String) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = format
+        formatter.timeZone = .current
+        formatter.locale = .current
+        
+        return formatter.string(from: date)
     }
 }

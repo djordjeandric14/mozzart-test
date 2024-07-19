@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TabBarView: View {
     @State private var selectedTab = 0
-
+    
     var body: some View {
         TabView(selection: $selectedTab) {
             GreekGamesListView()
@@ -18,7 +18,7 @@ struct TabBarView: View {
                     Text("Izvlačenje")
                 }
                 .tag(0)
-
+            
             ResultsView()
                 .tabItem {
                     Image(systemName: "list.bullet")
