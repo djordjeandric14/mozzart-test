@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GreekGamesListView: View {
     @StateObject private var viewModel = GreekGamesViewModel()
+    @EnvironmentObject var bannerManager: BannerManager
     
     var body: some View {
         NavigationStack {
@@ -23,6 +24,9 @@ struct GreekGamesListView: View {
                             .font(.caption)
                     }
                 }
+            }
+            .onAppear {
+                viewModel.bannerManager = bannerManager
             }
             .refreshable {
                 viewModel.getAllGames()

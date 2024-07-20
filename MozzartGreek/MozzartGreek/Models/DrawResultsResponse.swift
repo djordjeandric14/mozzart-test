@@ -38,4 +38,7 @@ public struct DrawResults: Codable, Identifiable {
 struct WinningNumbers: Codable {
     let list, bonus: [Int]
     
+    var sortedList: [Int] {
+        list.sorted()
+    }
 }

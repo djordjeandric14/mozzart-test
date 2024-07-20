@@ -18,7 +18,7 @@ struct ResultsView: View {
                         .font(.headline)
                     Text("Datum: \(result.prettyDateString)")
                         .font(.subheadline)
-                    GridView(items: result.winningNumbers.list)
+                    GridView(items: result.winningNumbers.sortedList)
                 }
                 .padding(.vertical, 8)
             }

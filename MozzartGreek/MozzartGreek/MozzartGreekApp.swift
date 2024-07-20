@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct MozzartGreekApp: App {
+    @StateObject private var bannerManager = BannerManager()
+    
     var body: some Scene {
         WindowGroup {
             TabBarView()
+                .environmentObject(bannerManager)
+                .overlay(BannerView().environmentObject(bannerManager))
         }
     }
 }

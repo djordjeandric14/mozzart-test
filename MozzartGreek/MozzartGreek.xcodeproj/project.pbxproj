@@ -21,6 +21,7 @@
 		BCBEE1972C497544000026FD /* GameDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBEE1962C497544000026FD /* GameDetailsView.swift */; };
 		BCBEE1992C497557000026FD /* GameDetailsVIewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBEE1982C497557000026FD /* GameDetailsVIewModel.swift */; };
 		BCBEE19C2C4984DE000026FD /* TimeFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCBEE19B2C4984DE000026FD /* TimeFormatter.swift */; };
+		BCE0AA292C4BC41000B3C143 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE0AA282C4BC41000B3C143 /* BannerView.swift */; };
 		BCE75C812C4A7885009CFE98 /* LiveGreekWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE75C802C4A7885009CFE98 /* LiveGreekWebView.swift */; };
 		BCE75C842C4A7E8F009CFE98 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE75C832C4A7E8F009CFE98 /* TabBarView.swift */; };
 		BCE75C872C4A86D2009CFE98 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE75C862C4A86D2009CFE98 /* ResultsView.swift */; };
@@ -64,6 +65,7 @@
 		BCBEE1962C497544000026FD /* GameDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsView.swift; sourceTree = "<group>"; };
 		BCBEE1982C497557000026FD /* GameDetailsVIewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameDetailsVIewModel.swift; sourceTree = "<group>"; };
 		BCBEE19B2C4984DE000026FD /* TimeFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeFormatter.swift; sourceTree = "<group>"; };
+		BCE0AA282C4BC41000B3C143 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 		BCE75C802C4A7885009CFE98 /* LiveGreekWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveGreekWebView.swift; sourceTree = "<group>"; };
 		BCE75C832C4A7E8F009CFE98 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 		BCE75C862C4A86D2009CFE98 /* ResultsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
@@ -242,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				BCE75C8F2C4AC695009CFE98 /* GridView.swift */,
+				BCE0AA282C4BC41000B3C143 /* BannerView.swift */,
 			);
 			path = SharedViews;
 			sourceTree = "<group>";
@@ -388,6 +391,7 @@
 				BCBEE1902C4966DB000026FD /* GreekGamesListView.swift in Sources */,
 				BCBEE18C2C4963A9000026FD /* ApiService.swift in Sources */,
 				BCE75C892C4A86E6009CFE98 /* ResultsViewModel.swift in Sources */,
+				BCE0AA292C4BC41000B3C143 /* BannerView.swift in Sources */,
 				BCBEE1892C4962E7000026FD /* GreekGamesResponse.swift in Sources */,
 				BCE75C902C4AC695009CFE98 /* GridView.swift in Sources */,
 				BCBEE1922C496717000026FD /* GreekGamesViewModel.swift in Sources */,

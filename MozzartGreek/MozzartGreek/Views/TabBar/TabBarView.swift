@@ -23,12 +23,13 @@ struct TabBarView: View {
                     Image(systemName: "bolt.circle.fill")
                     Text("Uživo izvlačenje")
                 }
+                .tag(1)
             ResultsView()
                 .tabItem {
                     Image(systemName: "list.bullet")
                     Text("Rezultati")
                 }
-                .tag(1)
+                .tag(2)
         }
     }
 }
